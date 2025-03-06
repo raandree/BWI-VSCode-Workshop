@@ -15,3 +15,15 @@
 - GitLense
 
 regex
+
+## Git
+
+```
+git init
+```
+
+The script lists All Running Processes Sorted by Memory Usage (Top 10)
+
+```powershell
+Get-Process | Sort-Object -Property WS -Descending | Select-Object -First 10 Name, WS, CPU
+```
