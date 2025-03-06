@@ -12,5 +12,6 @@
 - Copilot Chat
 - Copilot
 - Cline https://cline.bot/
+- GitLense
 
 regex
