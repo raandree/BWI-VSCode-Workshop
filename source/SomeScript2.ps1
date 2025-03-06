@@ -8,7 +8,7 @@ Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, BuildNum
 Get-Process | Sort-Object -Property WS -Descending | Select-Object -First 10 Name, WS, CPU
 
 # 3. Find Large Files (>100MB) in Current Directory and Subdirectories
-Get-ChildItem -Path . -Recurse | Where-Object { $_.Length -gt 100MB } | Select-Object FullName, @{Name="Size(MB)";Expression={$_.Length / 1MB}}
+Get-ChildItem -Path . -Recurse | Where-Object { $_.Length -gt 200MB } | Select-Object FullName, @{Name="Size(MB)";Expression={$_.Length / 1MB}}
 
 # 4. Get List of Installed Applications
 Get-WmiObject -Class Win32_Product | Select-Object Name, Version, Vendor
@@ -17,7 +17,8 @@ Get-WmiObject -Class Win32_Product | Select-Object Name, Version, Vendor
 Get-WmiObject -Class Win32_LogicalDisk | Where-Object {$_.DriveType -eq 3} | Select-Object DeviceID, @{Name="Size(GB)";Expression={$_.Size/1GB}}, @{Name="FreeSpace(GB)";Expression={$_.FreeSpace/1GB}}
 
 # 6. Test Network Connectivity with Continuous Ping
-Test-Connection -ComputerName 8.8.8.8 -Count 4
+$ip = '10.0.0.1'
+Test-Connection -ComputerName $ip -Count 4
 
 # 7. List All Services and Their Status
 Get-Service | Where-Object {$_.Status -eq 'Running'} | Select-Object Name, Status, DisplayName
