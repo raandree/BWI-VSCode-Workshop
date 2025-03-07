@@ -1,0 +1,14 @@
+Cars:
+  - Model: Focus
+    Color: Blue
+    Options:
+      - AC
+      - Power Windows
+      - Power Locks
+      - Cruise Control
+    Manufacturer: Ford
+    Engine:
+      Fuel: Gasoline
+      Cylinders: 4
+      Displacement: 2
+    Year: 2012

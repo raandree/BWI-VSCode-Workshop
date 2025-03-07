@@ -1,0 +1,17 @@
+{
+    "Color": "Blue",
+    "Options": [
+        "AC",
+        "Power Windows",
+        "Power Locks",
+        "Cruise Control"
+    ],
+    "Manufacturer": "Ford",
+    "Engine": {
+        "Fuel": "Gasoline",
+        "Cylinders": 4,
+        "Displacement": 2.0
+    },
+    "Model": "Focus",
+    "Year": 2012
+}

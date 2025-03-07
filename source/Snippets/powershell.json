@@ -1,0 +1,27 @@
+{
+	"Write to console": {
+		"prefix": "My Write",
+		"body": [
+			"Write-Host $1"
+		],
+		"description": "Write output to console"
+	},
+
+	"Custom Help Block": {
+		"prefix": "My Help",
+		"body": [
+			"<#",
+			"Skriptname: Anleitung-Befehle.ps1",
+			"",
+			"Ersteller: $1 ($2)",
+			"",
+			"Funktion / Beschreibung:",
+			"$3",
+			"History:",
+			"Datum      | Version | Bearbeiter               | Grund",
+			"-------------------------------------------------------------------------------------------------",
+			"#>"
+		],
+		"description": "Standard Help Block"
+	}
+}
